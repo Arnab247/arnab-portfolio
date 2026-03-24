@@ -27,7 +27,7 @@ export default function ProjectDetail() {
   // Scroll to top and fetch markdown on mount
   useEffect(() => {
     window.scrollTo(0, 0);
-    
+
     fetch(`/projects/${slug}.md`)
       .then((res) => {
         if (!res.ok) throw new Error('Markdown file not found');
@@ -63,11 +63,11 @@ export default function ProjectDetail() {
         <Link to="/" className={styles.backBtn}>
           <ArrowLeft size={18} /> Back to Blueprint
         </Link>
-        
+
         <article className={`minimal-card animate-fade-up ${styles.projectCard}`}>
           <h1 className={`${styles.title} gradient-text-theme`}>{project.title}</h1>
           <p className={styles.description}>{project.description}</p>
-          
+
           <div className={styles.tags}>
             {project.tags.map((tag, i) => (
               <span key={i} className={styles.tag}>{tag}</span>
@@ -75,7 +75,7 @@ export default function ProjectDetail() {
           </div>
 
           <div className={styles.markdownContent}>
-            <ReactMarkdown 
+            <ReactMarkdown
               remarkPlugins={[remarkGfm, remarkMath]}
               rehypePlugins={[rehypeKatex]}
             >
@@ -89,7 +89,7 @@ export default function ProjectDetail() {
                 <ExternalLink size={18} /> View Live Project
               </a>
             )}
-            
+
             {project.githubLink && (
               <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className={styles.primaryBtn} style={{ background: 'var(--text-primary)' }}>
                 <Code2 size={18} /> GitHub Repository
