@@ -1,8 +1,21 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import GeometricGrid from './components/GeometricGrid';
 import Home from './pages/Home';
 import ProjectDetail from './pages/ProjectDetail';
+import data from './data/portfolio.json';
+
+const LinkedInRedirect = () => {
+  useEffect(() => {
+    window.location.replace(data.profile.linkedin);
+  }, []);
+  return (
+    <div className="container" style={{ padding: '10rem 0', textAlign: 'center' }}>
+      <h2 className="gradient-text-theme">Redirecting to LinkedIn...</h2>
+    </div>
+  );
+};
 
 function App() {
   return (
@@ -13,6 +26,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/project/:slug" element={<ProjectDetail />} />
+        <Route path="/linkedin" element={<LinkedInRedirect />} />
       </Routes>
 
       <footer style={{ padding: '4rem 0', borderTop: '1px solid rgba(255,255,255,0.7)', borderBottom: '6px solid var(--accent-green)', marginTop: '4rem', background: 'linear-gradient(135deg, rgba(255,255,255,0.85), rgba(255,255,255,0.4))', backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)' }}>
