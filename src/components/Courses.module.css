@@ -1,0 +1,190 @@
+.coursesSection {
+  padding: 8rem 0;
+  position: relative;
+  z-index: 10;
+}
+
+/* Mandala / Sacred Geometry — faint polar coordinate grid */
+.coursesSection::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background: 
+    repeating-conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      transparent 14deg,
+      rgba(0, 0, 128, 0.02) 14deg,
+      rgba(0, 0, 128, 0.02) 15deg
+    ),
+    repeating-radial-gradient(
+      circle at center,
+      transparent 0px,
+      transparent 60px,
+      rgba(255, 153, 51, 0.015) 60px,
+      rgba(255, 153, 51, 0.015) 62px
+    );
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tierSection {
+  margin-bottom: 5rem;
+}
+
+.tierHeader {
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+}
+
+.tierTitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-navy);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.tierTitle::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: var(--accent-saffron);
+  border-radius: 2px;
+}
+
+.tierDescription {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.courseCard {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 128, 0.1);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* IC Chip Pin-Notch — top-left semicircular cutout */
+.courseCard::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 16px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid rgba(0, 0, 128, 0.12);
+  z-index: 2;
+}
+
+.courseCard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--accent-saffron);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.courseCard:hover {
+  transform: translateX(5px);
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 153, 51, 0.3);
+  box-shadow: 0 10px 25px -10px rgba(0, 0, 128, 0.1);
+}
+
+.courseCard:hover::after {
+  opacity: 1;
+}
+
+.iconWrapper {
+  background: rgba(0, 0, 128, 0.05);
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-navy);
+  flex-shrink: 0;
+}
+
+.courseCard:hover .iconWrapper {
+  background: rgba(255, 153, 51, 0.1);
+  color: var(--accent-saffron);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.code {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-navy);
+  letter-spacing: 0.05em;
+}
+
+.name {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

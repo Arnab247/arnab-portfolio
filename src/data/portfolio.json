@@ -1,0 +1,387 @@
+{
+  "profile": {
+    "name": "Arnab Mandal",
+    "title": "Electrical Engineering @ UofT | AI Researcher",
+    "subTitle": "Bridging the gap between powerful intelligence and physical engineering. I architect mixed-signal systems for low-power AI, integrating everything from analog circuitry and Verilog-based FPGA acceleration to machine learning deployment.",
+    "heroDescription": "Driven by a deep curiosity for how intelligence meets silicon. Exploring the physical limits of low-power AI through mixed-signal design and hardware acceleration.",
+    "location": "Toronto, ON",
+    "email": "arnab.mandal@mail.utoronto.ca",
+    "linkedin": "https://www.linkedin.com/in/arnab-mandal-35b7131ba/",
+    "github": "https://github.com/Arnab247",
+    "phone": "+1 647-525-0678",
+    "connectText": "I'm always open to new conversations. Whether it's about mixed-signal design, a potential project, or just geeking out over tech, feel free to drop me a line."
+  },
+  "education": [
+    {
+      "institution": "University of Toronto",
+      "logo": "/UofTLogo.png",
+      "degree": "Bachelor of Applied Science in Electrical Engineering + PEY",
+      "slug": "uoft-electrical-engineering",
+      "period": "Sep 2023 - April 2028",
+      "details": "Current GPA: 3.89/4.00 (87.6% average). NSERC Grant Holder. University of Toronto Book Award Recipient."
+    },
+    {
+      "institution": "Fort Richmond Collegiate",
+      "logo": "/FortRichmondCollegiateLogo.webp",
+      "degree": "High School Diploma",
+      "slug": "high-school-diploma",
+      "period": "Sep 2019 - Jun 2023",
+      "details": "Awards: Student of the Year (2023), 2nd Place Academic Achievement Award. Activities: Tech Crew President, Student Council, Peer Tutoring, Jazz & Symphonic Band, Cross Country, Water Polo, and Debate."
+    },
+    {
+      "institution": "Coursera",
+      "degree": "Deep Learning Specialization",
+      "slug": "deep-learning-specialization",
+      "period": "Issued Aug 2021",
+      "details": "TensorFlow and Deep Learning. Credential ID: DH52KL2GUERP"
+    },
+    {
+      "institution": "Coursera",
+      "degree": "AI for Medicine Specialization",
+      "slug": "ai-medicine-specialization",
+      "period": "Issued Aug 2021",
+      "details": "TensorFlow and Deep Learning. Credential ID: SLPN3KZ7RXUP"
+    }
+  ],
+  "experience": [
+    {
+      "role": "2025 Summer Research Internship",
+      "company": "Intelligent Sensory Microsystems Lab, University of Toronto",
+      "logo": "/UofTLogo.png",
+      "slug": "2025-ismlab-research",
+      "period": "May 2025 - Present",
+      "description": "Secured NSERC USRA grant ($7,500) for low-power hardware acceleration. Architecting hardware-software co-design for implantable hardware. Superheading hardware acceleration of core processing pipeline in Verilog on FPGA.",
+      "longDescription": [
+        "Secured a nationally competitive NSERC USRA grant ($7,500) to fund research into low-power hardware acceleration.",
+        "Architecting a hardware-software co-design for low-power AI, strategically partitioning ML algorithms between on-chip implantable hardware and external processors.",
+        "Superheading the hardware acceleration of the core processing pipeline, implementing a closed-loop controller in Verilog on an FPGA to achieve sub-millisecond latency for real-time neuromodulation.",
+        "Led the complete migration of a 1100-line legacy research codebase from TensorFlow 1.15 to 2.15, resolving critical GPU incompatibilities."
+      ]
+    },
+    {
+      "role": "2024 Summer Research",
+      "company": "University of Manitoba",
+      "logo": "/UniversityofManitobaLogo.jpg",
+      "slug": "2024-umanitoba-research",
+      "period": "May 2024 - Oct 2024",
+      "description": "Researched Distributive Nonradiative Communication, involving complex mathematical proofreading and translating equations into heavily optimized Matlab models for simulation.",
+      "longDescription": [
+        "Conducted deep literature reviews on Distributive Nonradiative Communication under the faculty of Engineering.",
+        "Translated high-level theoretical equations into scalable Matlab simulations to model communication fields."
+      ]
+    },
+    {
+      "role": "2024 Summer Research",
+      "company": "The University of Winnipeg",
+      "logo": "/UniversityofWinnipegLogo.jpg",
+      "slug": "2024-uwinnipeg-research",
+      "period": "May 2024 - Sep 2024",
+      "description": "Applied advanced Statistical Regression models in R, writing code for LASSO, Ridge, and Elastic Net regressions to parse high-dimensional datasets.",
+      "longDescription": [
+        "Focused entirely on high-dimensional Statistical Regression models.",
+        "Engineered reliable R code to implement LASSO, Ridge, and Elastic Net regressions on massive datasets to identify statistically significant parameters."
+      ]
+    },
+    {
+      "role": "Hospital Entrance Screener",
+      "company": "Winnipeg Regional Health Authority (WRHA)",
+      "slug": "2022-wrha-screener",
+      "period": "Sep 2022 - Mar 2023",
+      "description": "Conducted high-volume COVID-19 screenings, ensuring hospital and staff safety through strict protocol enforcement and communication.",
+      "longDescription": [
+        "Handled critical entrance screenings at WRHA facilities during the pandemic tail-end.",
+        "Deescalated tense situations and coordinated with nursing staff to maintain a secure perimeter."
+      ]
+    },
+    {
+      "role": "2022 Summer Research",
+      "company": "The University of Winnipeg",
+      "logo": "/UniversityofWinnipegLogo.jpg",
+      "slug": "2022-uwinnipeg-research",
+      "period": "Jun 2022 - Nov 2022",
+      "description": "Developed a statistical regression model to predict cancer mortality rates across U.S. demographics under the supervision of Dr. Shakhawat Hossain.",
+      "longDescription": [
+        "Assisted Dr. Shakhawat Hossain in statistical modeling to output highly accurate predictions.",
+        "Built models leveraging Python and R to predict state-by-state cancer mortality rates based on socioeconomic and genetic predictors."
+      ]
+    },
+    {
+      "role": "2021 Summer Research Internship",
+      "company": "University of Manitoba",
+      "logo": "/UniversityofManitobaLogo.jpg",
+      "slug": "2021-umanitoba-research",
+      "period": "Jun 2021 - Dec 2021",
+      "description": "Architected LSTM, KNN, and SVM machine learning models completely from scratch to execute stock market predictions based on historical time-series data.",
+      "longDescription": [
+        "Spearheaded early exploration into predictive Machine Learning models.",
+        "Wrote dedicated architectures for Long Short-Term Memory (LSTM) neural networks, K-Nearest Neighbors (KNN), and Support Vector Machines (SVM)."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Bio-Tensor MD: Molecular Dynamics ASIC",
+      "tags": [
+        "ASIC",
+        "Verilog",
+        "Architecture",
+        "Verilator"
+      ],
+      "description": "A custom Application-Specific Integrated Circuit (ASIC) engineered exclusively for high-throughput Molecular Dynamics (MD), executing structural physics spatially.",
+      "image": "/BioTensorMDBlockDiagram.png",
+      "gallery": [
+        "/BioTensorMDCoordinateGraph.png"
+      ],
+      "githubLink": "https://github.com/Arnab247/ttsky-bioTensor",
+      "driveLink": "https://drive.google.com/drive/folders/15KJvahjvg5_eOEyivKlLDUVLts9ek4ui?usp=sharing"
+    },
+    {
+      "title": "Software Defined Radio (SDR) Demodulator",
+      "tags": [
+        "LTSpice",
+        "Altium Designer",
+        "Hardware"
+      ],
+      "description": "Designed a complete analog SSB Demodulator circuit with a multi-stage 100-4000 Hz active filter.",
+      "driveLink": "https://drive.google.com/drive/folders/1HWx4MyCyHDzEYK5leXJxuq3Bs_QZ1xqy?usp=sharing"
+    },
+    {
+      "title": "FPGA-Based Quantum Circuit Simulator",
+      "tags": [
+        "C",
+        "Assembly",
+        "Nios V",
+        "FPGA"
+      ],
+      "description": "Engineered core quantum simulation firmware in C and Assembly for a Nios V processor.",
+      "githubLink": "https://github.com/Muhammadahmed-1/FPGA-Based-Quantum-Circuit-Visualizer-DE1-SoC-Nios-V-"
+    },
+    {
+      "title": "FPGA-Based Pacman Game in Verilog",
+      "tags": [
+        "Verilog",
+        "VGA",
+        "FPGA"
+      ],
+      "description": "Architected a top-level module on a DE1-SoC FPGA with 640x480 60Hz VGA graphics pipeline.",
+      "driveLink": "https://drive.google.com/drive/folders/1BPZd2Hdxa6Wfm6ENKdGpNNk21knHCkxD?usp=sharing"
+    },
+    {
+      "title": "Autonomous Survival Rover",
+      "tags": [
+        "Arduino",
+        "C++",
+        "Gemini AI",
+        "Robotics"
+      ],
+      "description": "Designed a two-brain robotics architecture utilizing an Arduino for real-time motor control and obstacle avoidance, paired with a cloud-based LLM for high-level strategic decision-making.",
+      "githubLink": "https://github.com/islamjaw/RoverWatch-MakeUofT2026",
+      "driveLink": "https://youtu.be/oWmTBQs7K8k?si=T1k4hUrtbaw4D_Au"
+    },
+    {
+      "title": "Mobile Phone Monitoring Applications",
+      "tags": [
+        "Biomedical",
+        "Signal Processing",
+        "Data Analysis",
+        "Python",
+        "Conceptual Design"
+      ],
+      "description": "Collaborated with a team to design a conceptual application that repurposes existing smartphone sensors (like accelerometers) to monitor biometric data such as muscle fatigue during exercises, featuring a detailed feasibility study and signal-to-noise ratio (SNR) analysis.",
+      "driveLink": "https://drive.google.com/drive/folders/1DNMkabzg5HYaE7uVMV4AhYAX_81i5eI_?usp=sharing"
+    }
+  ],
+  "skills": {
+    "languages": [
+      "C/C++",
+      "Python",
+      "Verilog",
+      "R",
+      "Matlab"
+    ],
+    "tools": [
+      "PCB Design",
+      "Quartus Prime",
+      "Machine Learning",
+      "Deep Learning",
+      "TensorFlow",
+      "ModelSim",
+      "FPGA",
+      "Altium Designer",
+      "LTSpice",
+      "Cadence",
+      "React JS",
+      "SwiftUI"
+    ]
+  },
+  "courses": [
+    {
+      "tier": "Tier 1: 3rd & 4th Year Core Specialization (Hardware, Analog & Bio)",
+      "description": "Your most advanced, highly relevant coursework for ASIC/FPGA design and biomedical hardware.",
+      "list": [
+        {
+          "code": "ECE334H1",
+          "name": "Digital Electronics"
+        },
+        {
+          "code": "ECE331H1",
+          "name": "Analog Electronics"
+        },
+        {
+          "code": "ECE335H1",
+          "name": "Intro. to Electronic Devices"
+        },
+        {
+          "code": "ECE412",
+          "name": "Analog Signal Processing"
+        },
+        {
+          "code": "BME445H1",
+          "name": "Neural Bioelectricity"
+        },
+        {
+          "code": "BME331H1",
+          "name": "Physiological Control Systems"
+        }
+      ]
+    },
+    {
+      "tier": "Tier 2: 3rd & 4th Year Advanced Systems, Control & Economics",
+      "description": "The rest of your upper-year courses, covering high-level systems, networking, and engineering economics.",
+      "list": [
+        {
+          "code": "ECE311H1",
+          "name": "Intro to Control Systems"
+        },
+        {
+          "code": "ECE344H1",
+          "name": "Operating Systems"
+        },
+        {
+          "code": "ECE316H1",
+          "name": "Communication Systems"
+        },
+        {
+          "code": "ECE361H1",
+          "name": "Computer Networks I"
+        },
+        {
+          "code": "ECE302H1",
+          "name": "Probability & Applications"
+        },
+        {
+          "code": "ECE472H1",
+          "name": "Eng.Eco.Ana.& Entre."
+        },
+        {
+          "code": "JRE300H1",
+          "name": "Fund. of Accounting & Finance"
+        }
+      ]
+    },
+    {
+      "tier": "Tier 3: 2nd Year Foundational Hardware & Embedded Systems",
+      "description": "The critical second-year prerequisites that built your foundation in digital logic, computer architecture, and circuits.",
+      "list": [
+        {
+          "code": "ECE295H1",
+          "name": "Hardware Design and Comm."
+        },
+        {
+          "code": "ECE241H1",
+          "name": "Digital Systems"
+        },
+        {
+          "code": "ECE243H1",
+          "name": "Computer Organization"
+        },
+        {
+          "code": "ECE231H1",
+          "name": "Intro. Electronics"
+        },
+        {
+          "code": "ECE212H1",
+          "name": "Circuit Analysis"
+        },
+        {
+          "code": "ECE244H1",
+          "name": "Programming Fundamentals"
+        },
+        {
+          "code": "ECE216H1",
+          "name": "Signals and Systems"
+        },
+        {
+          "code": "ECE221H1",
+          "name": "Ele.&Magnet.Fields 2"
+        },
+        {
+          "code": "MAT290H1",
+          "name": "Advanced Eng. Mathematics"
+        },
+        {
+          "code": "MAT291H1",
+          "name": "Intro. to Mathematical Physics"
+        },
+        {
+          "code": "ECE201H1",
+          "name": "Sem: Elec.& Comp. Engineering"
+        }
+      ]
+    },
+    {
+      "tier": "Tier 4: 1st Year General Engineering & Math",
+      "description": "Your introductory first-year engineering and mathematics courses.",
+      "list": [
+        {
+          "code": "ECE110H1",
+          "name": "Elect.Fundamentals"
+        },
+        {
+          "code": "APS105H1",
+          "name": "Computer Fundamental"
+        },
+        {
+          "code": "MAT187H1",
+          "name": "Calculus 2"
+        },
+        {
+          "code": "MAT186H1",
+          "name": "Calculus 1"
+        },
+        {
+          "code": "MAT188H1",
+          "name": "App. Linear Algebra"
+        },
+        {
+          "code": "CIV100H1",
+          "name": "Mechanics"
+        },
+        {
+          "code": "MIE100H1",
+          "name": "Dynamics"
+        },
+        {
+          "code": "APS110H1",
+          "name": "Eng.Chemistry & Materials Sci."
+        },
+        {
+          "code": "APS111H1",
+          "name": "Eng.Strategies & Practice I"
+        },
+        {
+          "code": "APS112H1",
+          "name": "Eng.Strategies & Practice II"
+        },
+        {
+          "code": "ECE191H1",
+          "name": "Intro.to Elec.& Comp.Eng./Sem"
+        },
+        {
+          "code": "APS100H1",
+          "name": "Orientation to Engineering"
+        }
+      ]
+    }
+  ]
+}

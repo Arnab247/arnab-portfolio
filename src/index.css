@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Noto+Sans+Bengali:wght@400;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* India + Robotics Tech Palette */
+  --bg: #f8fafc; /* Cool slate off-white for depth */
+  --bg-secondary: #ffffff; /* Pure white for cards to pop */
+  
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-tertiary: #64748b;
+  
+  /* India Colors */
+  --accent-saffron: #FF9933; /* India Saffron */
+  --accent-green: #138808; /* India Green */
+  --accent-navy: #000080; /* Navy Blue (Chakra/Tech) */
+  --accent-vermillion: #E23D28; /* Sindoor/Vermillion */
+  --accent-canada-red: #D80621; /* Canadian Red */
+  
+  --accent-bg: rgba(0, 0, 128, 0.04); /* Navy faint bg */
+  
+  /* Machined Borders & Shadows */
+  --border-light: #cbd5e1;
+  --border-tech: #000080;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 10px 20px -3px rgba(255, 153, 51, 0.2), 0 4px 6px -2px rgba(255, 153, 51, 0.1); /* Saffron glow */
+  
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  /* Chakra Petch is a techy mono-inspired font, perfect for robotics */
+  --font-mono: 'Chakra Petch', ui-monospace, Consolas, 'JetBrains Mono', monospace; 
+  --font-bengali: 'Noto Sans Bengali', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  /* Blueprint Grid with Crosshair Marks */
+  background-image: 
+    radial-gradient(circle, rgba(0, 0, 128, 0.12) 1px, transparent 1px),
+    linear-gradient(rgba(0, 0, 128, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 128, 0.06) 1px, transparent 1px);
+  background-size: 75px 75px, 25px 25px, 25px 25px;
+  background-attachment: fixed;
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--accent-navy); /* Deep tech navy for headers */
+  line-height: 1.2;
+}
+
+code, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Base Container */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Machined Card Utility - Liquid Glassmorphism */
+.minimal-card {
+  /* Liquid Sheen: Diagonal translucent fade */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.2) 100%);
+  /* Glossy Bevel: Light catches top-left, shadows bottom-right */
+  border-top: 1px solid rgba(255, 255, 255, 0.9);
+  border-left: 1px solid rgba(255, 255, 255, 0.6);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px; /* Smoother radius for fluid tension */
+  padding: 2rem;
+  /* Thick glass depth */
+  box-shadow: 0 8px 32px -8px rgba(0, 0, 128, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* Power Rail Effect */
+.minimal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 4px;
+  background: var(--accent-saffron);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(255, 153, 51, 0.5);
+}
+
+.minimal-card:hover::before {
+  transform: scaleY(1);
+}
+
+.minimal-card:hover {
+  transform: translateY(-4px);
+  /* Premium ambient light flare: deep navy base + saffron/green edges */
+  box-shadow: 
+    0 20px 40px -10px rgba(0, 0, 128, 0.1), 
+    0 0 20px rgba(255, 153, 51, 0.08),
+    0 0 40px rgba(255, 153, 51, 0.04);
+  border-color: rgba(255, 153, 51, 0.5); /* Saffron rim flare */
+}
+
+/* Gradient Text Utilities */
+.gradient-text-accent {
+  background: linear-gradient(135deg, var(--accent-saffron) 0%, var(--accent-green) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-text-theme {
+  /* Professional Tricolor Gradient: Dominant Navy -> Subtle Green -> Sharp Saffron Edge */
+  background: linear-gradient(135deg, var(--accent-navy) 0%, #1e3a8a 55%, var(--accent-green) 85%, var(--accent-saffron) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-navy);
+  border-radius: 0px; /* machined */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-vermillion); /* Sindoor vermillion hover */
+}
+
+/* Alpona Section Divider — Bengali floor art, triple ornament */
+.section-divider {
+  width: 100%;
+  max-width: 360px;
+  height: 1px;
+  margin: 0 auto;
+  position: relative;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 128, 0.2), transparent);
+}
+
+.section-divider::before {
+  content: '─  ◆  ─';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.55rem;
+  color: var(--accent-saffron);
+  opacity: 0.8;
+  background: var(--bg);
+  padding: 0 0.5rem;
+  letter-spacing: 0.15em;
+  white-space: nowrap;
+}
+
+.section-divider::after {
+  content: '·    ·';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.7rem;
+  color: var(--accent-navy);
+  opacity: 0.25;
+  padding: 0 4rem;
+  letter-spacing: 6rem;
+  white-space: nowrap;
+}

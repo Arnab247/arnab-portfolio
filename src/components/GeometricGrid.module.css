@@ -1,0 +1,28 @@
+.gridContainer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1; /* Place purely behind all content */
+  overflow: hidden;
+}
+
+.gridNode {
+  position: absolute;
+  transform: translate(-50%, -50%); /* Centered exactly on the graph crosshair */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CAD Highlighters */
+.colorNavy {
+  color: rgba(0, 0, 128, 0.15); /* Exact match for deep navy ink watermark */
+}
+
+.colorSaffron {
+  color: rgba(255, 153, 51, 0.2); /* Saffron highlighter ink */
+}
+
+.colorGreen {
+  color: rgba(19, 136, 8, 0.4); /* Tech Green - higher opacity to stand out against navy */
+}

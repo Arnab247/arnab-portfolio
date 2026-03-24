@@ -1,0 +1,254 @@
+.pageWrapper {
+  padding: 10rem 0 6rem;
+  min-height: 100vh;
+  position: relative;
+  z-index: 10;
+}
+
+.contentContainer {
+  max-width: 900px;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--accent-navy);
+  margin-bottom: 2rem;
+  transition: all 0.2s ease;
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  backdrop-filter: blur(8px);
+  text-decoration: none;
+}
+
+.backBtn:hover {
+  transform: translateX(-4px);
+  color: var(--accent-saffron);
+  border-color: var(--accent-saffron);
+}
+
+.projectCard {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(0, 0, 128, 0.05);
+  border: 1px solid var(--border-tech);
+  color: var(--accent-navy);
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.detailsSection {
+  margin-bottom: 3rem;
+  background: rgba(0,0,128,0.02);
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 2px solid var(--border-tech);
+}
+
+.detailsSection h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+}
+
+.detailsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detailsList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.bullet {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  margin-top: 0.4rem;
+  background: var(--accent-saffron);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255,153,51,0.5);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2.5rem;
+  background: var(--accent-navy);
+  color: #fff;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.primaryBtn:hover {
+  background: var(--accent-saffron);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 153, 51, 0.4);
+}
+
+.notFound {
+  padding: 10rem 0;
+  text-align: center;
+}
+
+/* ----------------------------------
+   Markdown Content Engine Overrides (Vite/Vanilla equivalent of Tailwind .prose)
+------------------------------------- */
+
+.markdownContent {
+  margin-top: 3rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1.125rem;
+}
+
+.markdownContent > *:first-child {
+  margin-top: 0;
+}
+
+.markdownContent h1, 
+.markdownContent h2, 
+.markdownContent h3, 
+.markdownContent h4 {
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  margin-top: 2em;
+  margin-bottom: 1em;
+  line-height: 1.3;
+}
+
+.markdownContent h1 { font-size: 2.25rem; border-bottom: 1px solid var(--border-tech); padding-bottom: 0.5rem; }
+.markdownContent h2 { font-size: 1.75rem; border-bottom: 1px solid var(--border-tech); padding-bottom: 0.5rem; }
+.markdownContent h3 { font-size: 1.35rem; color: var(--accent-saffron); }
+
+.markdownContent p {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+.markdownContent ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.markdownContent li {
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Base custom Saffron bullet */
+.markdownContent li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65rem;
+  width: 8px;
+  height: 8px;
+  background: var(--accent-saffron);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255,153,51,0.5);
+}
+
+/* Prevent nested paragraphs inside lists from destroying spacing */
+.markdownContent li > p {
+  margin: 0;
+}
+
+/* Handle nested lists (e.g. sub-bullets) */
+.markdownContent li > ul {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+.markdownContent li > ul li::before {
+  background: transparent;
+  border: 2px solid var(--accent-saffron);
+  box-shadow: none;
+}
+
+.markdownContent strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.markdownContent hr {
+  border: 0;
+  border-top: 1px solid var(--border-tech);
+  margin: 3rem 0;
+}
+
+.markdownContent a {
+  color: var(--accent-saffron);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.markdownContent a:hover {
+  border-color: var(--accent-saffron);
+}
+
+.markdownContent img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border-tech);
+  box-shadow: 0 8px 32px rgba(0, 0, 128, 0.15);
+  margin: 2.5rem auto;
+  display: block;
+}

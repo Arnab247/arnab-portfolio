@@ -1,0 +1,179 @@
+.heroSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  background-image: url('/BannerTemp.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at right center, rgba(0, 0, 128, 0.35) 0%, rgba(15, 23, 42, 0.85) 100%);
+  /* Deep Tech Navy to Charcoal */
+  z-index: 1;
+}
+
+.chakraIcon {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 140vh;
+  height: 140vh;
+  color: var(--accent-saffron);
+  opacity: 0.12;
+  /* Increased opacity for stronger Chakra/India emphasis */
+  animation: rotate 60s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 800px;
+  padding-top: 4rem;
+  /* Offset for navbar */
+}
+
+.title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.nameHighlight {
+  color: #fff;
+}
+
+.subtitle {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 500;
+  color: #e2e8f0;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.typingText {
+  color: var(--accent-saffron);
+  /* India Saffron accent */
+  margin-left: 0.5rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  /* Terminal look */
+}
+
+.cursor {
+  color: var(--accent-saffron);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.description {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 3.5rem;
+  max-width: 600px;
+  line-height: 1.8;
+}
+
+.actions {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  padding: 1rem 2.5rem;
+  border-radius: 4px;
+  /* Machined robotics edge */
+  background: var(--accent-navy);
+  /* Solid navy core */
+  color: #fff;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  /* Technical mono */
+  font-size: 1.125rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 128, 0.4);
+  border: 1px solid var(--accent-navy);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  background: var(--accent-saffron);
+  /* Saffron pop */
+  border-color: var(--accent-saffron);
+  box-shadow: 0 8px 25px rgba(255, 153, 51, 0.6);
+}
+
+.secondaryBtn {
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  font-weight: 500;
+  font-family: var(--font-mono);
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+}
+
+.secondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  border-color: var(--accent-saffron);
+  /* Saffron outline on hover */
+}
+
+/* Bengali Script Watermark — অর্ণব (Arnab) */
+.bengaliWatermark {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-family: var(--font-bengali);
+  font-size: clamp(8rem, 20vw, 18rem);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.11);
+  pointer-events: none;
+  z-index: 1;
+  line-height: 1;
+  user-select: none;
+  letter-spacing: 0.05em;
+}

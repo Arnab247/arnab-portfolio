@@ -1,0 +1,94 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.scrolled {
+  /* Liquid Glass Navbar */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.5) 100%);
+  border-top: 3px solid var(--accent-saffron);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  padding: 1rem 0;
+  box-shadow: 0 8px 32px -8px rgba(0, 0, 128, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Optional: if not scrolled, text might need drop shadow if over bright images, 
+   but since hero overlay is dark, we can force link colors to be light when at top, 
+   or keep them standard. Let's adapt coloring based on scroll */
+   
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.logoEnglish,
+.logoBengali {
+  transition: opacity 0.4s ease;
+}
+
+.logoBengali {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: var(--font-bengali);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logo:hover .logoEnglish {
+  opacity: 0;
+}
+
+.logo:hover .logoBengali {
+  opacity: 1;
+}
+
+.scrolled .logo {
+  color: var(--text-primary);
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navLink {
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: #fff;
+}
+
+.scrolled .navLink {
+  color: var(--text-secondary);
+}
+
+.scrolled .navLink:hover {
+  color: var(--accent-saffron);
+}
