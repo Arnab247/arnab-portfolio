@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
           <a href="/#experience" className={styles.navLink}>Timeline</a>
           <a href="/#courses" className={styles.navLink}>Courses</a>
           <a 
-            href="https://drive.google.com/file/d/1ZbmpGxTpUdRXXmUQ_UG0m7jNW-o560tp/view?usp=sharing" 
+            href="https://drive.google.com/file/d/1wgnUAIWQz8A-k6ZHEUwSoo_1tZ7CDFw6/view?usp=sharing" 
             className={styles.navLink}
             target="_blank"
             rel="noopener noreferrer"
