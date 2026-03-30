@@ -30,8 +30,8 @@ const Navbar: React.FC = () => {
           <a href="/#projects" className={styles.navLink}>Work</a>
           <a href="/#experience" className={styles.navLink}>Timeline</a>
           <a href="/#courses" className={styles.navLink}>Courses</a>
-          <a 
-            href="https://drive.google.com/file/d/1wgnUAIWQz8A-k6ZHEUwSoo_1tZ7CDFw6/view?usp=sharing" 
+          <a
+            href="https://drive.google.com/file/d/1bh1elZhYGwMsilXYQ1zol9vh0wPR_6R3/view?usp=sharing"
             className={styles.navLink}
             target="_blank"
             rel="noopener noreferrer"

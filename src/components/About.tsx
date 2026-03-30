@@ -5,7 +5,7 @@ import data from '../data/portfolio.json';
 
 const About: React.FC = () => {
   const { profile } = data;
-  
+
   return (
     <section id="about" className={styles.aboutSection}>
       <div className={`container ${styles.aboutContainer}`}>
@@ -28,9 +28,9 @@ const About: React.FC = () => {
             <p><strong>Location:</strong> <span className={styles.locationIcon}><Leaf size={14} /></span> {profile.location}</p>
           </div>
           <a href="#projects" className={styles.primaryBtn}>See My Work</a>
-          <span className={styles.bengaliGreeting}>— নমস্কার</span>
+          <span className={styles.bengaliGreeting}>— নমস্কার</span><p> (Welcome)</p>
         </div>
-        
+
         <div className={`animate-fade-up delay-200 ${styles.imageContent}`}>
           {/* We use the same hero background image as a placeholder for a personal profile shot */}
           <div className={styles.imageWrapper}>
